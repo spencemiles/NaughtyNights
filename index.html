@@ -722,6 +722,58 @@ function adjustLayout() {
 // Call adjustLayout function when the page loads or when resizing the window
 window.addEventListener('load', adjustLayout);
 window.addEventListener('resize', adjustLayout);
+function createScratchCard(cardData) {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const img = document.createElement("img");
+    img.src = cardData.image;
+    card.appendChild(img);
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 150;
+    canvas.height = 200;
+    card.appendChild(canvas);
+
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "gray";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    let isScratching = false;
+
+    function scratch(x, y) {
+        ctx.clearRect(x - 10, y - 10, 20, 20);
+    }
+
+    // **Prevent touch scrolling while scratching**
+    canvas.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        isScratching = true;
+    }, { passive: false });
+
+    canvas.addEventListener("touchend", () => isScratching = false);
+    canvas.addEventListener("touchmove", (e) => {
+        if (!isScratching) return;
+        e.preventDefault();
+        let touch = e.touches[0];
+        let rect = canvas.getBoundingClientRect();
+        let x = touch.clientX - rect.left;
+        let y = touch.clientY - rect.top;
+        scratch(x, y);
+    }, { passive: false });
+
+    canvas.addEventListener("mousedown", () => isScratching = true);
+    canvas.addEventListener("mouseup", () => isScratching = false);
+    canvas.addEventListener("mousemove", (e) => {
+        if (!isScratching) return;
+        let rect = canvas.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        scratch(x, y);
+    });
+
+    return card;
+}
 
     </script>
    
