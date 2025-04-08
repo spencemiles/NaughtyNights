@@ -1,222 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Under Maintenance</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naughty Nights - Coming Soon</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #030303;
-      color: #faf7f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1b0035, #3a0071);
+      color: #f5f5f5;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-    }
-
-    .maintenance-container {
-      text-align: center;
-      background-color: #110471;
-      padding: 40px 60px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      font-size: 36px;
-      color: #fcfafa;
-    }
-
-    p {
-      font-size: 18px;
-      color: #fcf8f8;
-      margin-top: 20px;
-    }
-
-    .countdown {
-      font-size: 40px;
-      color: #fcf9f9;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    .emoji {
-      font-size: 50px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="maintenance-container">
-    <h1>🚧 Site Under Maintenance 🚧</h1>
-    <p>We're upgrading for YOU! Get ready for exciting new games, fresh vibes, and exclusive couple products! Stay tuned, we’ll be back better than ever!</p>
-
-    <div class="countdown" id="countdown"></div>
-
-    <div class="emoji">🚧</div>
-  </div>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>April 2025 Calendar</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .calendar-container {
-      background-color: #ffffff;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       text-align: center;
+      backdrop-filter: blur(10px);
     }
 
-    h1 {
-      font-size: 36px;
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
       margin-bottom: 20px;
-      color: #ff4d4d;
+      color: #ff69b4;
     }
 
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 10px;
-      font-size: 18px;
-    }
-
-    .day {
-      padding: 10px;
-      border-radius: 8px;
-      background-color: #f2f2f2;
-      cursor: pointer;
-    }
-
-    .day:hover {
-      background-color: #ff7f7f;
-      color: white;
-    }
-
-    .marked-day {
-      background-color: #ff4d4d;
-      color: white;
-    }
-
-    .weekdays {
+    .highlight {
+      color: #ff69b4;
       font-weight: bold;
     }
 
+    .description {
+      font-size: 18px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .quote-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+      font-style: italic;
+      color: #ffddee;
+      transition: opacity 0.5s ease-in-out;
+      min-height: 60px;
+    }
+
+    .features {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .features h3 {
+      color: #ff99cc;
+      margin-bottom: 10px;
+    }
+
+    .features ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .features li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 32px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="logo">Naughty Nights</div>
+    <p class="description">
+      Our game platform is <span class="highlight">getting spiced up</span> just for you! ❤️ We’re taking a short break to add wild new features — couple fun, money-win games, and legit online jobs. It’s taking longer, because you deserve the best. We're coming back <span class="highlight">hotter, smarter, and sexier</span> than ever.
+    </p>
 
-  <div class="calendar-container">
-    <h1>April 2025</h1>
-    <div class="calendar" id="calendar">
-      <!-- Days of the week header -->
-      <div class="weekdays">Sun</div>
-      <div class="weekdays">Mon</div>
-      <div class="weekdays">Tue</div>
-      <div class="weekdays">Wed</div>
-      <div class="weekdays">Thu</div>
-      <div class="weekdays">Fri</div>
-      <div class="weekdays">Sat</div>
+    <div class="features">
+      <h3>What’s Coming Soon:</h3>
+      <ul>
+        <li><strong>Steamy Couple Games:</strong> Truth & dares, strip challenges, intimacy quizzes, and more 🔥</li>
+        <li><strong>Sponsored Games:</strong> Partnered with adult brands offering irresistible prizes 💎</li>
+        <li><strong>Promoted Titles:</strong> Explore trending romance, seduction, and excitement games 💋</li>
+        <li><strong>Naughty Shop:</strong> Couple toys, fantasy kits, roleplay gear, massage oils, and more 😏</li>
+        <li><strong>Smart UI:</strong> Personalized experiences, saved sessions, voice-guided play, and adaptive features 🎮</li>
+        <li><strong>Interactive Community:</strong> Reviews, playlists, shared fantasies, and real-time interactions 😈</li>
+        <li><strong>Money-Win Games:</strong> Earn rewards and prizes while playing — it's fun and rewarding 💰</li>
+        <li><strong>Legit Online Jobs:</strong> Explore real, trustworthy opportunities to earn while you play 💼</li>
+      </ul>
+      
     </div>
+
+    <div class="quote-box" id="quoteBox">"Love is fun when you play it right 😘"</div>
   </div>
 
   <script>
-    // Define the month and year for the calendar
-    const month = 3;  // 0-indexed (0 = January, 3 = April)
-    const year = 2025;
+    const quotes = [
+      "Love is fun when you play it right 😘",
+      "A little play never hurt nobody 😏",
+      "Good love is wild, passionate, and full of games 🎲❤️",
+      "Let’s turn your nights into adventure nights 💋",
+      "Couples who play together, stay together 💑",
+      "Seduction is an art. Let’s make you an artist 🎨🔥",
+      "Tonight’s mood: fun, flirty, and maybe a little naughty 😈",
+      "Level up your love life — one game at a time 💞",
+      "Lust is a language. Ready to speak it fluently? 💬💋",
+      "The best nights start with a spark... and a game 😉"
+    ];
 
-    // Function to create the calendar
-    function generateCalendar(month, year) {
-      const calendar = document.getElementById('calendar');
-      // First, we clear any existing content in the calendar
-      calendar.innerHTML = `
-        <div class="weekdays">Sun</div>
-        <div class="weekdays">Mon</div>
-        <div class="weekdays">Tue</div>
-        <div class="weekdays">Wed</div>
-        <div class="weekdays">Thu</div>
-        <div class="weekdays">Fri</div>
-        <div class="weekdays">Sat</div>
-      `;
-      
-      // Get the first day of the month and how many days are in the month
-      const firstDay = new Date(year, month, 1).getDay();
-      const totalDays = new Date(year, month + 1, 0).getDate();
+    const quoteBox = document.getElementById('quoteBox');
+    let index = 0;
 
-      // Create empty spaces for days before the 1st day of the month
-      for (let i = 0; i < firstDay; i++) {
-        const emptyDiv = document.createElement('div');
-        calendar.appendChild(emptyDiv);
-      }
-
-      // Create the days of the month
-      for (let day = 1; day <= totalDays; day++) {
-        const dayDiv = document.createElement('div');
-        dayDiv.classList.add('day');
-        
-        // Mark the 11th of April
-        if (day === 11) {
-          dayDiv.classList.add('marked-day');
-        }
-
-        dayDiv.textContent = day;
-        calendar.appendChild(dayDiv);
-      }
-    }
-
-    // Generate the calendar for April 2025
-    generateCalendar(month, year);
+    setInterval(() => {
+      index = (index + 1) % quotes.length;
+      quoteBox.style.opacity = 0;
+      setTimeout(() => {
+        quoteBox.textContent = quotes[index];
+        quoteBox.style.opacity = 1;
+      }, 400);
+    }, 4000);
   </script>
-
-</body>
-</html>
-
-  <script>
-    // Set the date we're counting down to (5 days from today)
-    const countdownDate = new Date().getTime() + 5 * 24 * 60 * 60 * 1000;
-
-    // Update the countdown every 1 second
-    const x = setInterval(function() {
-
-      // Get the current time
-      const now = new Date().getTime();
-      
-      // Calculate the difference between now and the countdown date
-      const distance = countdownDate - now;
-
-      // Time calculations for days, hours, minutes, and seconds
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Display the result in the countdown div
-      document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      // If the countdown finishes, display a message
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "We're back! 🎉";
-      }
-    }, 1000);
-  </script>
-
 </body>
 </html>
